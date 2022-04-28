@@ -1,0 +1,32 @@
+class Stack:
+    def __init__(self):
+        self.stack=[]
+    def push(self,data):
+        self.stack.append(data)
+    def pop(self):
+        if(len(self.stack))<=0:
+            print("No elements in stack")
+        else:
+            self.stack.pop()
+    def print(self):
+        for i in self.stack:
+            print(i,end=" ")
+        print()
+    def peek(self):
+        if(len(self.stack))<=0:
+            print("The peek element is",self.stack[-1])
+        else:
+            print("The stack is empty! No peek element in stack")
+    
+obj=Stack()
+while(1):
+    n=int(input("Enter the choice:"))
+    if(n==1):
+        data=input("Enter the data into the stack:")
+        obj.push(data)
+    elif(n==2):
+        obj.pop()
+    elif(n==3):
+        obj.peek()
+    elif(n==4):
+        obj.print()
