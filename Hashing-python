@@ -1,0 +1,59 @@
+# Data-Structures-in-Python
+# Hashing in python
+'''
+Prerequisites:-
+-->Dictionary
+-->Counter
+-->Defaultdict
+'''
+----------------------------------------
+#Accessing key-pair values in dictionary. 
+
+dict={"a":1,"b":2,"c":3}
+for i in dict.keys():
+	print(i)
+for j in dict.values():
+	print(j)
+for i,j in dict.items():
+	print(i,j)
+'''
+Output:-
+a
+b
+c
+1
+2
+3
+a 1
+b 2
+c 3
+'''
+---------------------------------------
+# Counter
+
+from collections import Counter
+l=[1,2,2,3,4,5,6,6]
+items = Counter(l).items()
+print(items)
+s="geeksforgeeks"
+x=Counter(s)
+for i in x.elements():
+	print(i)
+'''
+Output:-
+dict_items([(1, 1), (2, 2), (3, 1), (4, 1), (5, 1), (6, 2)])
+g
+g
+e
+e
+e
+e
+k
+k
+s
+s
+f
+o
+r
+'''
+------------------------------------------
