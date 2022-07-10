@@ -1,0 +1,51 @@
+# Data-Structures-in-Python
+class Tree:
+	def __init__(self,data):
+		self.root=data
+		self.left=None
+		self.right=None
+	def PrintRoot(self):
+		print(self.root)
+	def BST(self,node):
+		if(node<self.root):
+			if(self.left is None):
+				self.left=Tree(node)
+			else:
+				self.left.BST(node)
+		elif(node>self.root):
+			if(self.right is None):
+				self.right=Tree(node)
+			else:
+				self.right.BST(node)
+	def PrintBSTtree(self,node,l):
+		#Inorder Traversal
+		if(node is not None):
+			self. PrintBSTtree(node.left,l)
+			l.append(node.root)
+			self. PrintBSTtree(node.right,l)
+		return l
+#Enter the root. 
+n=int(input("Enter the root of BST:"))
+root=Tree(n)
+#Enter the no of elements to enter in BST. 
+m=int(input("Enter the no of elements in BST:"))
+#Enter the elements in next line. 
+print("Enter the elements:")
+for i in range(m):
+	data=int(input())
+	root.BST(data)
+print("The Inorder traversal is:")
+l=[]
+print(root.PrintBSTtree(root,l))
+'''
+Enter the root of BST:3
+Enter the no of elements in BST:5
+Enter the elements:
+1
+2
+7
+5
+9
+The Inorder traversal is:
+[1, 2, 3, 5, 7, 9]
+'''
