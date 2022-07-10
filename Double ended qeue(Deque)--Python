@@ -1,0 +1,15 @@
+# Data-Structures-in-Python
+import collections
+Deque = collections.deque(["Mon"])
+Deque.append("Thu")
+print ("Appended at right - ")
+print (Deque)
+Deque.appendleft("Sun")
+print ("Appended at right at left is - ")
+print (Deque)
+Deque.pop()
+print ("Deleting from right - ")
+print (Deque)
+Deque.popleft()
+print ("Deleting from left - ")
+print (Deque)
